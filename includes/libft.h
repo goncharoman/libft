@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 14:07:06 by ujyzene           #+#    #+#             */
-/*   Updated: 2019/10/24 15:56:51 by ujyzene          ###   ########.fr       */
+/*   Updated: 2019/10/24 16:11:25 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,4 +121,5 @@ t_queue				*ft_qunew(size_t capacity);
 void				ft_enqueue(t_queue *queue, int item);
 int					ft_dequeue(t_queue *queue);
 void				ft_quremove(t_queue **queue);
+void				ft_qureset(t_queue *queue);
 #endif
