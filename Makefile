@@ -6,18 +6,20 @@
 #    By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 13:55:20 by ujyzene           #+#    #+#              #
-#    Updated: 2019/10/24 03:41:34 by ujyzene          ###   ########.fr        #
+#    Updated: 2020/04/16 23:32:19 by ujyzene          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ## COLORS ##
+F_DIM	= \033[2m
+F_BOLD	= \033[1m
+GRAY	= \033[38;5;253m
 RESET	= \e[0m
 ITALIC	= \e[3m
-RED		= \e[31m
-GREEN	= \e[32m
-YELLOW	= \e[33m
-BLUE	= \e[34m
-MAGENTA	= \e[35m
+RED		= \033[38;5;160m
+GREEN	= \033[38;5;35m
+YELLOW	= \033[38;5;184m
+BLUE	= \033[38;5;32m
 
 ## ESC ##
 CLEARL	= \e[2K
@@ -166,7 +168,7 @@ $(NAME) : $(OBJS) $(HEAD)
 	@ printf "$(CLEARL)\r"
 	@ ar rcs $(NAME) $(OBJS)
 	@ ranlib $(NAME)
-	@ printf "Create $(NAME) $(GREEN)done!$(RESET)\n"
+	@ printf "$(F_DIM)$(F_BOLD)$(GRAY)%-10s$(RESET) $(F_BOLD)$(NAME)$(RESET) $(GREEN)were created!$(RESET)\n" "(lib)"
 
 $(TEMP):
 	@ mkdir -p $@
@@ -174,14 +176,14 @@ $(TEMP):
 
 $(TEMP)/%.o : $(SRCS)/%.c
 	@ $(CC) $(FLAGS) -I $(INCL) -o $@ -c $<
-	@ printf "$(YELLOW)Compile:$(RESET) %21s\r" "$(notdir $@)"
+	@ printf "$(F_DIM)$(F_BOLD)$(GRAY)%-10s$(RESET) $(YELLOW)compile:$(RESET) %21s\r" "(lib)" "$(notdir $@)"
 
 clean :
 	@ rm -rf $(TEMP)
-	@ printf "$(YELLOW)Objs files clear$(RESET)\n"
+	@ printf "$(F_DIM)$(F_BOLD)$(GRAY)%-10s$(RESET) $(YELLOW)temp files were deleted$(RESET)\n" "(lib)"
 
 fclean : clean
 	@ rm -rf $(NAME)
-	@ printf "$(YELLOW)$(NAME) removing!$(RESET)\n"
+	@ printf "$(F_DIM)$(F_BOLD)$(GRAY)%-10s$(RESET) $(F_BOLD)$(NAME)$(RESET) $(YELLOW)were deleted$(RESET)\n" "(lib)"
 
 re : fclean all
