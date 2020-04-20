@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 03:34:21 by ujyzene           #+#    #+#             */
-/*   Updated: 2019/10/24 03:37:00 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/04/17 12:42:59 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,11 @@ typedef union		u_double
 		uint32_t	sign : 1;
 	}				spec;
 }					t_double_cast;
+
+typedef enum		s_bool
+{
+	false,
+	true
+}					t_bool;
 
 #endif
