@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 14:07:06 by ujyzene           #+#    #+#             */
-/*   Updated: 2019/10/24 16:11:25 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/04/21 12:49:34 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_atoi_base(const char *str, int base);
 size_t				ft_lstlen(t_list *list);
 void				ft_lstappend(t_list **alst, t_list *new);
+t_list				*ft_lsttail(t_list **head);
 t_stack				*ft_stnew(size_t size);
 int					ft_stpop(t_stack *stack);
 void				ft_stpush(t_stack *stack, int item);
