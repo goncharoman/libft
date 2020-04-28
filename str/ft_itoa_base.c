@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ujyzene <ujyzene@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 16:14:24 by ujyzene           #+#    #+#             */
-/*   Updated: 2019/08/11 23:18:44 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/04/28 23:44:23 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char				*ft_itoa_base(intmax_t n, unsigned int base, int sign)
 		else if (sign)
 			ans[offset++] = '+';
 	}
-	rec_itoa(ABS(n), base, ans, &offset);
+	rec_itoa(FT_ABS(n), base, ans, &offset);
 	ans[offset] = '\0';
 	return (ans);
 }

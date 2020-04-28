@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ftoe.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ujyzene <ujyzene@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 13:17:57 by ujyzene           #+#    #+#             */
-/*   Updated: 2019/09/29 01:41:52 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/04/28 23:43:50 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,9 @@ static void		put_exp(char *s, int exp)
 	char *tmp;
 
 	ft_strcat(s, exp > 0 ? "e+" : "e-");
-	if (ABS(exp) < 10)
+	if (FT_ABS(exp) < 10)
 		ft_strcat(s, "0");
-	ft_strcat(s, (tmp = ft_itoa(ABS(exp))));
+	ft_strcat(s, (tmp = ft_itoa(FT_ABS(exp))));
 	free(tmp);
 }
 

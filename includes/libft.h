@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 14:07:06 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/04/21 12:49:34 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/04/28 23:53:33 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,19 @@
 
 # ifdef __linux__
 	# include <stdint.h>
-	# define ABS(n) ft_abs(n)
+	# define FT_ABS(X) ft_abs(X)
 # elif __APPLE__
-	# define ABS(n) ((n < 0) ? -n : n)
+	# define FT_ABS(X) ((X < 0) ? (-X) : X)
 #endif
+
+# define FT_MAX(X, Y) ((X >= Y) ? X : Y)
+# define FT_MIN(X, Y) ((X < Y) ? X : Y)
+
+# define STCK_OUT		(INT32_MIN)
+# define QUEUE_OUT		(INT32_MIN)
 
 # include <get_next_line.h>
 # include <ft_structs.h>
-# define FT_MININT	-2147483648
-# define FT_MAXINT	2147483647
-# define STCK_OUT	FT_MININT
-# define QUEUE_OUT	FT_MININT
-# define MAX(n1, n2) (n1 >= n2 ? n1 : n2)
 
 intmax_t			ft_abs(intmax_t n);
 void				*ft_memset(void *b, int c, size_t len);
