@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 14:07:06 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/04/28 23:53:33 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/04/29 00:24:56 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_isdigit(int c);
 int					ft_isspace(char c);
 int					ft_atoi(const char *str);
+int32_t				ft_atoi32(const char *str);
 int					ft_isalpha(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
