@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 15:08:48 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/04/29 00:26:00 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/04/30 03:20:00 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int32_t	ft_atoi32(const char *str)
 	while (ft_isspace(*str))
 		str++;
 	sign = (*str == '-') ? -1 : 1;
+	if (*str == '-' || *str == '+')
+		str++;
 	while (ft_isdigit(*str))
 	{
 		if ((result > border || (result == border && *str - '0' > 7)) &&
