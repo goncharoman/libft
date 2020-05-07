@@ -6,7 +6,7 @@
 #    By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 13:55:20 by ujyzene           #+#    #+#              #
-#    Updated: 2020/04/21 12:50:02 by ujyzene          ###   ########.fr        #
+#    Updated: 2020/05/07 17:46:45 by ujyzene          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,7 +102,8 @@ FILES	= $(addprefix str/, \
 			ft_strtrim.c \
 			ft_tolower.c \
 			ft_toupper.c \
-			ft_uitoa_base.c )
+			ft_uitoa_base.c \
+			)
 	# mem #
 FILES	+= $(addprefix mem/, \
 			ft_bzero.c \
@@ -136,7 +137,9 @@ FILES	+= $(addprefix list/, \
 			ft_lstmap.c \
 			ft_lstnew.c \
 			ft_lstsort.c \
-			ft_lsttail.c )
+			ft_lsttail.c \
+			ft_lstextract.c \
+			)
 	# stack #
 FILES	+= $(addprefix stack/, \
 			ft_stnew.c \
