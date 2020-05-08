@@ -6,7 +6,7 @@
 #    By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 13:55:20 by ujyzene           #+#    #+#              #
-#    Updated: 2020/05/08 23:06:47 by ujyzene          ###   ########.fr        #
+#    Updated: 2020/05/08 23:12:33 by ujyzene          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -138,7 +138,6 @@ FILES	+= $(addprefix list/, \
 			ft_lstnew.c \
 			ft_lstsort.c \
 			ft_lsttail.c \
-			ft_lstextract.c \
 			)
 	# stack #
 FILES	+= $(addprefix stack/, \
