@@ -6,7 +6,7 @@
 #    By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 13:55:20 by ujyzene           #+#    #+#              #
-#    Updated: 2020/05/07 17:46:45 by ujyzene          ###   ########.fr        #
+#    Updated: 2020/05/08 23:06:47 by ujyzene          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -158,6 +158,7 @@ FILES	+= $(addprefix queue/, \
 			ft_qureset.c )
 	# read #
 FILES 	+= $(addprefix read/, \
+			ft_getchar.c \
 			ft_readline.c \
 			get_next_line.c )
 

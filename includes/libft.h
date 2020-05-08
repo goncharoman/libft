@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 14:07:06 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/07 17:45:56 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/05/08 23:05:46 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ char				*ft_lftoa(long double n, unsigned int prec, int sign);
 int					ft_strarrlen(char **strarr);
 void				ft_strarrdel(char ***strarr);
 char				*ft_readline(int fd);
+char				ft_getchar();
 char				*ft_strsepjoin(char const *s1, char const *s2, char sep);
 int					ft_strindexof(char *s, char c);
 t_list				*ft_lst(void const *content, size_t content_size);
