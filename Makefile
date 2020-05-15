@@ -6,7 +6,7 @@
 #    By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 13:55:20 by ujyzene           #+#    #+#              #
-#    Updated: 2020/05/08 23:12:33 by ujyzene          ###   ########.fr        #
+#    Updated: 2020/05/15 04:30:17 by ujyzene          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,11 +43,15 @@ DIRS	= str \
 			queue \
 			read \
 			stack \
+			printf
 
 HEAD	= $(addprefix includes/, \
 			libft.h \
 			ft_structs.h \
-			get_next_line.h )
+			get_next_line.h \
+			ft_printf.h \
+			ft_pf.h \
+			)
 
 	# str #
 FILES	= $(addprefix str/, \
@@ -160,6 +164,23 @@ FILES 	+= $(addprefix read/, \
 			ft_getchar.c \
 			ft_readline.c \
 			get_next_line.c )
+
+	# ft_printf #
+FILES	+= $(addprefix printf/, \
+			ft_pf.c \
+			ft_printf.c \
+			ft_vprintf.c \
+			pf_chars_handler.c \
+			pf_float_handlers.c \
+			pf_format.c \
+			pf_format_handlers.c \
+			pf_forms_handlers.c \
+			pf_int_handler.c \
+			pf_str.c \
+			pf_table1.c \
+			pf_table2.c \
+			pf_tables_handlers.c \
+			)
 
 # OBJ 	= $(addprefix $(TEMP)/, $(FILES):.c=.o))
 OBJS	= $(FILES:%.c=$(TEMP)/%.o)

@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 14:07:06 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/08 23:05:46 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/05/15 04:26:10 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 
 # include <get_next_line.h>
 # include <ft_structs.h>
+# include <ft_printf.h>
 
 intmax_t			ft_abs(intmax_t n);
 void				*ft_memset(void *b, int c, size_t len);
