@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 14:07:06 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 04:26:10 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/05/16 21:53:40 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,8 +97,10 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void				ft_lstriter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-void				*ft_lstextract(t_list **begin, int (*cmp) (void*));
+void				ft_lstfilter(t_list	**alst, t_bool (*cmp)(void *),
+					void (*del)(void *));
 int					ft_atoi_base(const char *str, int base);
 size_t				ft_lstlen(t_list *list);
 void				ft_lstappend(t_list **alst, t_list *new);

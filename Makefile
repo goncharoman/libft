@@ -6,7 +6,7 @@
 #    By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 13:55:20 by ujyzene           #+#    #+#              #
-#    Updated: 2020/05/15 04:30:17 by ujyzene          ###   ########.fr        #
+#    Updated: 2020/05/16 21:54:08 by ujyzene          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -136,9 +136,11 @@ FILES	+= $(addprefix list/, \
 			ft_lstappend.c \
 			ft_lstdel.c \
 			ft_lstdelone.c \
+			ft_lstriter.c \
 			ft_lstiter.c \
 			ft_lstlen.c \
 			ft_lstmap.c \
+			ft_lstfilter.c \
 			ft_lstnew.c \
 			ft_lstsort.c \
 			ft_lsttail.c \

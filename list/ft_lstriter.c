@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstfilter.c                                     :+:      :+:    :+:   */
+/*   ft_lstriter.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/16 21:00:48 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/16 22:35:47 by ujyzene          ###   ########.fr       */
+/*   Created: 2018/12/13 15:14:17 by ujyzene           #+#    #+#             */
+/*   Updated: 2020/05/16 21:45:47 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_lstfilter(t_list	**alst, t_bool (*cmp)(void *), void (*del)(void *))
+void	ft_lstriter(t_list *lst, void (*f)(t_list *elem))
 {
-	t_list	*tmp;
-
-	if (!(tmp = *alst))
+	if (!lst)
 		return ;
-	if (cmp(tmp->content))
-	{
-		del(tmp->content);
-		*alst = tmp->next;
-		free(tmp);
-		ft_lstfilter(alst, cmp, del);
-	}
-	else
-		ft_lstfilter(&(tmp->next), cmp, del);
+	if (lst->next)
+		ft_lstiter(lst->next, f);
+	f(lst);
 }

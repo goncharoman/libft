@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ujyzene <ujyzene@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/13 15:14:17 by ujyzene           #+#    #+#             */
-/*   Updated: 2019/04/05 02:07:20 by ujyzene          ###   ########.fr       */
+/*   Created: 2020/05/16 21:42:09 by ujyzene           #+#    #+#             */
+/*   Updated: 2020/05/16 22:37:51 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	if (!lst)
 		return ;
+	f(lst);
 	if (lst->next)
 		ft_lstiter(lst->next, f);
-	f(lst);
 }
