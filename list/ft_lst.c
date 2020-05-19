@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 03:49:36 by ujyzene           #+#    #+#             */
-/*   Updated: 2019/10/18 03:57:10 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/05/19 05:55:18 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list			*ft_lst(void const *content, size_t content_size)
 {
 	t_list *tmp;
 
-	if (!(tmp = (t_list*)malloc(sizeof(t_list))))
+	if (!(tmp = (t_list*)ft_memalloc(sizeof(t_list))))
 		return (NULL);
 	tmp->content = (void*)content;
 	tmp->content_size = (!content ? 0 : content_size);
