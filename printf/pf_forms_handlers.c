@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 11:46:01 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/06/10 01:14:27 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:46:19 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char				*pf_form_handler(char **format, t_format *p, va_list args)
 		0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 3, 3, 3, 0, 1, 0, 0, 0, 0, 2, 2, 2, 0, 0,
 		5, 0, 2, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 	};
-	const char			*(*handlers[7])(char, t_format*, va_list) = {
+	static char			*(*handlers[7])(char, t_format*, va_list) = {
 		NULL,
 		&pf_int_handler,
 		&pf_uint_handler,

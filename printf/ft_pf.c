@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 21:08:35 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/06/10 01:18:27 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:45:49 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 inline t_tabcode	pf_next_table(t_tabcode table, char c)
 {
-	const char (*handlers[7])(char) = {
+	static char	(*handlers[7])(char) = {
 		NULL,
 		&pf_table0,
 		&pf_table1,
