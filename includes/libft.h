@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 14:07:06 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/16 21:53:40 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 00:56:01 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 # include <string.h>
 
 # ifdef __linux__
-	# include <stdint.h>
-	# define FT_ABS(X) ft_abs(X)
+#  include <stdint.h>
+#  define FT_ABS(X) ft_abs(X)
 # elif __APPLE__
-	# define FT_ABS(X) ((X < 0) ? (-X) : X)
-#endif
+#  define FT_ABS(X) ((X < 0) ? (-X) : X)
+# endif
 
 # define FT_MAX(X, Y) ((X >= Y) ? X : Y)
 # define FT_MIN(X, Y) ((X < Y) ? X : Y)
@@ -124,7 +124,7 @@ char				ft_getchar();
 char				*ft_strsepjoin(char const *s1, char const *s2, char sep);
 int					ft_strindexof(char *s, char c);
 t_list				*ft_lst(void const *content, size_t content_size);
-void				ft_lstsort(t_list* lst, int (*cmp)(void*, void*));
+void				ft_lstsort(t_list *lst, int (*cmp)(void *, void *));
 t_queue				*ft_qunew(size_t capacity);
 void				ft_enqueue(t_queue *queue, int item);
 int					ft_dequeue(t_queue *queue);

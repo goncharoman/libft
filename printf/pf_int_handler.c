@@ -6,13 +6,13 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 12:46:28 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 03:19:10 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:19:30 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_pf.h>
 
-inline static void	pre_form(t_format *p, char ch)
+inline static void		pre_form(t_format *p, char ch)
 {
 	if (ch == 'U' || ch == 'p')
 		p->mod = M_LLONG;
@@ -20,7 +20,7 @@ inline static void	pre_form(t_format *p, char ch)
 		p->alt = true;
 }
 
-inline static intmax_t get_int_value(t_format *p, va_list args)
+inline static intmax_t	get_int_value(t_format *p, va_list args)
 {
 	if (p->mod == M_NONE)
 		return (va_arg(args, int));
@@ -40,7 +40,7 @@ inline static intmax_t get_int_value(t_format *p, va_list args)
 		return (0);
 }
 
-inline static intmax_t get_uint_value(t_format *p, va_list args)
+inline static intmax_t	get_uint_value(t_format *p, va_list args)
 {
 	if (p->mod == M_NONE)
 		return (va_arg(args, unsigned int));
@@ -60,7 +60,7 @@ inline static intmax_t get_uint_value(t_format *p, va_list args)
 		return (0);
 }
 
-char	*pf_int_handler(char ch, t_format *p, va_list args)
+char					*pf_int_handler(char ch, t_format *p, va_list args)
 {
 	char	*value;
 	char	*tmp;
@@ -75,7 +75,7 @@ char	*pf_int_handler(char ch, t_format *p, va_list args)
 		return (NULL);
 	if (p->sign && p->pad == 48 && len--)
 		*tmp = *value++;
-	ft_strcat(tmp + (p->left ? 0: p->width - len), value);
+	ft_strcat(tmp + (p->left ? 0 : p->width - len), value);
 	if (p->width > len)
 		ft_memset(tmp + (p->sign && p->pad == 48) + (p->left ? len : 0),
 			p->pad, p->width - len - (p->sign && p->pad == 48));
@@ -83,7 +83,7 @@ char	*pf_int_handler(char ch, t_format *p, va_list args)
 	return (tmp);
 }
 
-char *pf_uint_handler(char ch, t_format *p, va_list args)
+char					*pf_uint_handler(char ch, t_format *p, va_list args)
 {
 	char		*value;
 	char		*tmp;

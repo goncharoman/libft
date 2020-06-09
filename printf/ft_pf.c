@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 21:08:35 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 04:22:26 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:18:27 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 inline t_tabcode	pf_next_table(t_tabcode table, char c)
 {
-	static char (*handlers[7])(char) = {
+	const char (*handlers[7])(char) = {
 		NULL,
 		&pf_table0,
 		&pf_table1,
@@ -23,10 +23,11 @@ inline t_tabcode	pf_next_table(t_tabcode table, char c)
 		&pf_table3b,
 		&pf_table4,
 	};
+
 	return (pf_pf_next_table(handlers[table](pf_jump_table(c))));
 }
 
-inline char					pf_jump_table(char ch)
+inline char			pf_jump_table(char ch)
 {
 	static const char	table[] = {
 		1, 0, 0, 4, 0, 14, 0, 6, 0, 0, 7, 2, 0, 3, 9, 0, 5, 8,
@@ -35,6 +36,7 @@ inline char					pf_jump_table(char ch)
 		0, 0, 18, 0, 13, 0, 0, 0, 0, 0, 0, 26, 0, 20, 15, 19, 19, 19,
 		10, 15, 28, 0, 11, 24, 23, 17, 22, 12, 0, 21, 27, 16, 0, 0, 18, 0, 13
 	};
+
 	if (ch < ' ' || ch > 'z')
 		return (0);
 	return (table[ch - ' ']);

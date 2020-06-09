@@ -6,13 +6,13 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 00:43:47 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 02:51:32 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:00:42 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_pf.h>
 
-char *pf_char_handler(char ch, t_format *p, va_list args)
+char	*pf_char_handler(char ch, t_format *p, va_list args)
 {
 	char	*c;
 
@@ -28,7 +28,7 @@ char *pf_char_handler(char ch, t_format *p, va_list args)
 	return (c);
 }
 
-char *pf_string_handler(char ch, t_format *p, va_list args)
+char	*pf_string_handler(char ch, t_format *p, va_list args)
 {
 	char	*tmp;
 	char	*value;
@@ -41,7 +41,7 @@ char *pf_string_handler(char ch, t_format *p, va_list args)
 		p->width = len;
 	if (ch != 's' || !(tmp = ft_strnew(p->width)))
 		return (NULL);
-	ft_strcat(tmp + (p->left ? 0: p->width - len), value);
+	ft_strcat(tmp + (p->left ? 0 : p->width - len), value);
 	if (p->width > len)
 		ft_memset(tmp + (p->left ? len : 0), p->pad, p->width - len);
 	return (tmp);

@@ -6,13 +6,13 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 14:40:12 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 03:27:29 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 00:59:35 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_printf.h>
 
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
 	int		err;
 	va_list	args;
@@ -23,7 +23,7 @@ int ft_printf(const char *format, ...)
 	return (err);
 }
 
-int ft_fprintf(int fd, const char *format, ...)
+int	ft_fprintf(int fd, const char *format, ...)
 {
 	int		err;
 	va_list	args;

@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 21:54:10 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 04:22:45 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 00:54:29 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,12 @@ t_format			pf_format_init(void);
 extern t_tabcode	pf_next_table(t_tabcode table, char c);
 extern char			pf_jump_table(char ch);
 extern t_tabcode	pf_pf_next_table(char resp);
-extern char 		pf_table0(char index);
-extern char 		pf_table1(char index);
-extern char 		pf_table2(char index);
-extern char 		pf_table3a(char index);
-extern char 		pf_table3b(char index);
-extern char 		pf_table4(char index);
+extern char			pf_table0(char index);
+extern char			pf_table1(char index);
+extern char			pf_table2(char index);
+extern char			pf_table3a(char index);
+extern char			pf_table3b(char index);
+extern char			pf_table4(char index);
 extern char			pf_table1_handler(char **format, t_format *p, va_list args);
 extern char			pf_table2_handler(char **format, t_format *p, va_list args);
 extern char			pf_table3a_handler(char **format, t_format *p);
@@ -94,9 +94,9 @@ extern void			pf_flag_handler(char ch, t_format *p);
 extern void			pf_mod_handler(char ch, t_format *p);
 extern void			pf_width_handler(char **format, t_format *p, va_list args);
 extern void			pf_prec_handler(char **format, t_format *p, va_list args);
-char 				*pf_char_handler(char ch, t_format *p, va_list args);
-char 				*pf_string_handler(char ch, t_format *p, va_list args);
-char 				*pf_int_handler(char ch, t_format *p, va_list args);
-char 				*pf_uint_handler(char ch, t_format *p, va_list args);
-char 				*pf_float_handler(char ch, t_format *p, va_list args);
+char				*pf_char_handler(char ch, t_format *p, va_list args);
+char				*pf_string_handler(char ch, t_format *p, va_list args);
+char				*pf_int_handler(char ch, t_format *p, va_list args);
+char				*pf_uint_handler(char ch, t_format *p, va_list args);
+char				*pf_float_handler(char ch, t_format *p, va_list args);
 #endif

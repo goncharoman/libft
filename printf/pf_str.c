@@ -6,13 +6,13 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 14:52:02 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 04:22:06 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:01:21 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_pf.h>
 
-t_pfs	pfs_init(void)
+t_pfs		pfs_init(void)
 {
 	t_pfs	tmp;
 
@@ -26,7 +26,7 @@ t_pfs	pfs_init(void)
 	return (tmp);
 }
 
-int		pfs_expand(t_pfs *fstr)
+int			pfs_expand(t_pfs *fstr)
 {
 	char	*tmp;
 

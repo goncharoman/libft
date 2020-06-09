@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 11:41:58 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 04:11:35 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:02:33 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ inline void			pf_mod_handler(char ch, t_format *p)
 
 static unsigned int	n_from_format(char **format)
 {
-	int n;
-	char *num;
+	int		n;
+	char	*num;
 
 	n = 0;
 	while (**format && ft_isdigit(*(*format + n)))

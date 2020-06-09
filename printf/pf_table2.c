@@ -6,15 +6,15 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 11:37:09 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/14 00:44:51 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:16:24 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_pf.h>
 
-char pf_table3a(char index)
+char	pf_table3a(char index)
 {
-	static char table3a[30] = {
+	const char table3a[30] = {
 		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 14, 15, 16, 17, 18, 19, 0, 0,
 		0, 0, 24, 0, 0, 0, 0, 0
 	};
@@ -22,10 +22,9 @@ char pf_table3a(char index)
 	return (table3a[(int)index]);
 }
 
-
-char pf_table3b(char index)
+char	pf_table3b(char index)
 {
-	static char table3b[30] = {
+	const char table3b[30] = {
 		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 14, 15, 16, 17, 18, 19, 0, 0,
 		0, 0, 24, 0, 0, 0, 0, 0
 	};

@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 00:40:28 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 03:19:47 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 01:14:59 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	pf_float_fill(t_format *p, char *dst, char *value, int len)
 {
 	if (p->sign && p->pad == 48 && len--)
 		*dst = *value++;
-	ft_strcat(dst + (p->left ? 0: p->width - len), value);
+	ft_strcat(dst + (p->left ? 0 : p->width - len), value);
 	if (p->width > len)
 		ft_memset(dst + (p->sign && p->pad == 48) + (p->left ? len : 0),
 			p->pad, p->width - len - (p->sign && p->pad == 48));

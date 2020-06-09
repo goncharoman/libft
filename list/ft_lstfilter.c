@@ -6,13 +6,13 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/16 21:00:48 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/16 22:35:47 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 00:58:07 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_lstfilter(t_list	**alst, t_bool (*cmp)(void *), void (*del)(void *))
+void	ft_lstfilter(t_list **alst, t_bool (*cmp)(void *), void (*del)(void *))
 {
 	t_list	*tmp;
 

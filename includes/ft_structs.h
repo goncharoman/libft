@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 03:34:21 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/04/17 12:42:59 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 00:53:40 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ typedef struct		s_stack
 
 typedef struct		s_queue
 {
-    int				front;
+	int				front;
 	int				rear;
 	int				size;
-    size_t			capacity;
-    int				*array;
+	size_t			capacity;
+	int				*array;
 }					t_queue;
 
 typedef union
@@ -59,7 +59,7 @@ typedef union		u_double
 	}				spec;
 }					t_double_cast;
 
-typedef enum		s_bool
+typedef enum		e_bool
 {
 	false,
 	true

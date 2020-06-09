@@ -6,7 +6,7 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/12 02:45:01 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/15 03:26:42 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 00:59:58 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static inline void	push_spec(t_pfs *fstr, char *buff)
 		free(buff);
 }
 
-int				ft_vprintf(int fd, const char *format, va_list args)
+int					ft_vprintf(int fd, const char *format, va_list args)
 {
 	t_pfs		fstr;
 	char		*tmp;

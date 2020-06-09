@@ -6,13 +6,16 @@
 /*   By: ujyzene <ujyzene@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 03:49:36 by ujyzene           #+#    #+#             */
-/*   Updated: 2020/05/19 05:55:18 by ujyzene          ###   ########.fr       */
+/*   Updated: 2020/06/10 00:56:54 by ujyzene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-/* NOTE: использует оригинальный content */
+/*
+** NOTE: использует оригинальный content
+*/
+
 t_list			*ft_lst(void const *content, size_t content_size)
 {
 	t_list *tmp;
