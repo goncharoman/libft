@@ -9,7 +9,7 @@ Libft - implementation of some of the [C Standard Library](https://en.wikipedia.
 >- [ft_printf]()
 
 ## Libft file structure
-![file structure](assets/code.png)
+![file structure](assets/files.png)
 
 - **includes** - libft structures and function declarations, ft_printf, get_next_line headers
 - **list** - functions for linked list manipulations
